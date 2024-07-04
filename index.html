@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schrödinger's Box</title>
+</head>
+  <style>
+    .container{
+      height: 98vh; 
+      width: 98vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #opened{
+      display: none;
+      text-align: center;
+      border: 1px solid grey;
+      padding: 2rem 4rem;
+      border-radius: .5rem;
+    }
+  </style>
+<body>
+  <div class="container">
+    <!-- Closed -->
+    <button id="closed" onclick="openBox()">Open the box</button>
+    <!-- Opened -->
+    <div id="opened" onclick="closeBox()">
+      <h1>Schrödinger</h1>
+      <img src="/img/cat.jpg" alt="Cat">
+      <h2>Meow</h2>
+      <button>Close the box</button>
+    </div>
+  </div>
+  <script>
+    function openBox() {
+      document.getElementById('closed').style.display = "none";
+      document.getElementById('opened').style.display = "block";
+    }
+    function closeBox() {
+      document.getElementById('closed').style.display = "block";
+      document.getElementById('opened').style.display = "none";
+    }
+  </script>
+</body>
+</html>
